@@ -1,0 +1,61 @@
+{
+  "version": "0.1.0",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "format": "prettier --write . --ignore-unknown",
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsc ./test/renderPropType.test.ts --noEmit",
+    "lint": "tsdx lint",
+    "prepare": "tsdx build",
+    "size": "size-limit",
+    "analyze": "size-limit --why"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint"
+    }
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "name": "react-render-prop-type",
+  "author": "Miroslav Petrik",
+  "module": "dist/react-render-prop-type.esm.js",
+  "size-limit": [
+    {
+      "path": "dist/react-render-prop-type.cjs.production.min.js",
+      "limit": "10 KB"
+    },
+    {
+      "path": "dist/react-render-prop-type.esm.js",
+      "limit": "10 KB"
+    }
+  ],
+  "devDependencies": {
+    "@size-limit/preset-small-lib": "^8.0.1",
+    "@types/react": "^18.0.17",
+    "husky": "^8.0.1",
+    "prettier": "^2.7.1",
+    "react": "^18.2.0",
+    "size-limit": "^8.0.1",
+    "tsdx": "^0.14.1",
+    "tslib": "^2.4.0",
+    "typescript": "^4.7.4"
+  }
+}
