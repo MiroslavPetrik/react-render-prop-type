@@ -23,6 +23,10 @@
   "peerDependencies": {
     "react": "^18.2.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MiroslavPetrik/react-render-prop-type.git"
+  },
   "husky": {
     "hooks": {
       "pre-commit": "tsdx lint"
