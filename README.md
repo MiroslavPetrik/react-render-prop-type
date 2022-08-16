@@ -8,9 +8,11 @@ Handy helper for components which need to have render prop.
 
 ## Description
 
-By default the renderProp will extend your props with a `children` render prop:
+By default the `RenderProp` will extend your props with a `children` render function:
 
 ```tsx
+import { RenderProp } from 'react-render-prop-type';
+
 type ColumnProps = {
   rowId: string;
 };
@@ -50,6 +52,8 @@ const AvatarColumn = (props: ColumnProps) => (
 Optionally, you can specify custom prop name, e.g. when you can't use the default children prop.
 
 ```tsx
+import { RenderProp } from 'react-render-prop-type';
+
 type ColumnProps = {
   rowId: string;
 };
