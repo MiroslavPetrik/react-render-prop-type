@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0",
+  "version": "1.0.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -14,14 +14,14 @@
     "format": "prettier --write . --ignore-unknown",
     "start": "tsdx watch",
     "build": "tsdx build",
-    "test": "tsc ./test/renderPropType.test.ts --noEmit",
+    "test": "tsc --project ./tsconfig.test.json",
     "lint": "tsdx lint",
     "prepare": "tsdx build",
     "size": "size-limit",
     "analyze": "size-limit --why"
   },
   "peerDependencies": {
-    "react": "^18.2.0"
+    "react": ">= 18.2.0"
   },
   "repository": {
     "type": "git",
@@ -60,6 +60,6 @@
     "size-limit": "^8.0.1",
     "tsdx": "^0.14.1",
     "tslib": "^2.4.0",
-    "typescript": "^4.7.4"
+    "typescript": "^5.7.2"
   }
 }

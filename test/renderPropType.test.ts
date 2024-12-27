@@ -1,4 +1,4 @@
-import { RenderProp } from '../src';
+import type { RenderProp, RP } from '../src';
 
 export type ExpectWorksWithoutParams = RenderProp;
 
@@ -11,6 +11,8 @@ export type ExpectWorksWithCustomName = RenderProp<
   'myRenderProp'
 >['myRenderProp'];
 
-type ExpectWorksWithEnum = RenderProp<{ icon: string }, 'before' | 'after'>;
-export type BeforeRenderProp = ExpectWorksWithEnum['before'];
-export type AfterRenderProp = ExpectWorksWithEnum['after'];
+type ExpectWorksWithUnion = RenderProp<{ icon: string }, 'before' | 'after'>;
+export type BeforeRenderProp = ExpectWorksWithUnion['before'];
+export type AfterRenderProp = ExpectWorksWithUnion['after'];
+
+export type ExpectWorksShortNoParams = RP;
